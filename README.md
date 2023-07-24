@@ -1,2 +1,2 @@
 # testimonials-grid-section-main
-this is a grid project for newbie one
+This Is The Grid Project For Newbie One
