@@ -21,7 +21,7 @@ body{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(10rem, 1fr));
-    width: 70rem;
+    width: 65rem;
     gap: 2rem 2rem;
     border: 2px solid rgb(114, 250, 123);
     align-items: center;
@@ -29,18 +29,33 @@ body{
 
 .no_1{
     grid-column: 1 / 3;
-    background-color: seagreen;
+    background-color: hsl(263, 55%, 52%);
+    color: hsl(0, 0%, 100%);
 }
 
-.no_5{
-    background-color: navajowhite;
-    grid-row: 1 / 3;
-    grid-column: 4 / 5;
+.no_1>.user_comment>p{
+    color: hsl(210, 46%, 95%);
+}
+
+.no_2{
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(210, 46%, 95%);
+}
+
+.no_3{
+    background-color: hsl(0, 0%, 100%);
 }
 
 .no_4{
-    background-color: lightcoral;
+    background-color: hsl(219, 29%, 14%);
     grid-column: 2 / 4;
+    color: hsl(210, 46%, 95%);
+}
+
+.no_5{
+    grid-row: 1 / 3;
+    grid-column: 4 / 5;
+    background-color: hsl(0, 0%, 100%);
 }
 
 .user_box {
@@ -50,11 +65,19 @@ body{
 
 .id_photo{
     border-radius: 100%;
-    border-color: blue;
+    width: 60%;
+    align-items: center;
 }
 
-.user_name{
-    padding-left: 1rem;
+.user_com_brief{
+    padding: 1rem 0%;
+}
+.ver_grad{
+    font-size: 11px;
+}
+
+.user_com_brief>h2{
+    font-weight: 500;
 }
 
 
