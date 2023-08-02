@@ -3,6 +3,7 @@
     margin: 0%;
     padding: 0%;
 }
+
 body{
     font-size: 13px;
     font-family: 'Barlow Semi Condensed', sans-serif;
@@ -21,10 +22,10 @@ body{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(10rem, 1fr));
-    width: 65rem;
-    gap: 2rem 2rem;
-    border: 2px solid rgb(114, 250, 123);
-    align-items: center;
+    width: 67rem;
+    gap: 1.5rem 2rem;
+    align-items: stretch;
+    justify-items: stretch;
 }
 
 .no_1{
@@ -59,19 +60,25 @@ body{
 }
 
 .user_box {
-    padding: 1.5rem 1.5rem;
-    border-radius: 15px;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    justify-content: stretch;
+    align-items: stretch;
 }
 
 .id_photo{
     border-radius: 100%;
-    width: 60%;
-    align-items: center;
+    width: 35px;
+}
+
+.user_name{
+    padding-left: 13px;
 }
 
 .user_com_brief{
     padding: 1rem 0%;
 }
+
 .ver_grad{
     font-size: 11px;
 }
@@ -79,6 +86,11 @@ body{
 .user_com_brief>h2{
     font-weight: 500;
 }
+
+#pat, #dan{
+    border: 2px solid hsl(263, 100%, 62%);
+}
+
 
 
 
