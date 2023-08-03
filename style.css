@@ -16,22 +16,22 @@ h1, h2, h3, h4, h5, h6, p {
     overflow-wrap: break-word;
   }
 
-.container{
+/* .container{
     display: grid;
     align-items: center;
     justify-content: center;
     height: 100%; 
     background-color: hsl(210, 46%, 95%);
     text-overflow: none;
-}
+} */
 
 .grid-box{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
-    grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
+    /* grid-template-rows: repeat(auto-fit, minmax(auto, 5fr)); */
     grid-auto-flow: column;
     gap: 1.5rem 2rem;
-    width: 80lvw;
+    max-width: 1440px;
 }
 
 .no_1{
@@ -98,15 +98,15 @@ h1, h2, h3, h4, h5, h6, p {
 
 
 
- /* @media (min-width: 600px){
+ @media (min-width: 576px){
     .container{
         margin: auto 160px;
     }
-} */
-/* @media (max-width: 600px){
+}
+
+@media (max-width: 576px){
     .grid-box{
-        grid-template-rows: repeat(auto-fit, minmax(4rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(575px, 1fr));
         grid-auto-flow: column;
-        /* grid-auto-columns: 200px; 
     }
-} */ 
+}
