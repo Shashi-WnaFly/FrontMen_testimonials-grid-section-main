@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0%;
     padding: 0%;
+    text-overflow: none;
 }
 
 body{
@@ -9,26 +10,20 @@ body{
     font-size: 13px;
     font-family: 'Barlow Semi Condensed', sans-serif;
     place-items: center;
+    background-color: hsl(210, 46%, 95%);
+    height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6, p {
     overflow-wrap: break-word;
   }
 
-/* .container{
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    height: 100%; 
-    background-color: hsl(210, 46%, 95%);
-    text-overflow: none;
-} */
-
 .grid-box{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
+    grid-template-columns: repeat(4, minmax(auto, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(auto, 1fr));
     gap: 1rem 1.5rem;
+    max-width: 1440px;
 }
 
 .no_1{
@@ -95,8 +90,8 @@ h1, h2, h3, h4, h5, h6, p {
 
  @media (min-width: 576px){
     .grid-box{
-        padding: 8rem 10.5rem;
-        height: 100%;
+        padding: 5rem 11.9rem;
+        grid-auto-columns: auto;
     }
 }
 
