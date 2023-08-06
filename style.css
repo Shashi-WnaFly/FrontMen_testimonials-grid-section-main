@@ -1,149 +1,178 @@
-*{
+/*      ###### Used color ######       */
+
+:root {
+
+    --light-gray: #CFCFCF;
+    --light-gray-blue: #ECF2F8;
+    --quote: #A373ED;
+    --mod-violet: #7541C8;
+    --dark-gray-blue: #48556A;
+    --dark-black-blue: #19212E;
+    --white: #FFFFFF;
+    
+}
+
+/* ******   css reset   ****** */
+
+* {
     box-sizing: border-box;
     margin: 0%;
     padding: 0%;
     text-overflow: none;
 }
 
-body{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    overflow-wrap: break-word;
+}
+
+/* *******  create layout using grid ******** */
+
+body {
     display: grid;
     font-size: 13px;
     font-family: 'Barlow Semi Condensed', sans-serif;
     place-items: center;
-    background-color: hsl(210, 46%, 95%);
+    background-color: var(--light-gray-blue);
     height: 100vh;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-    overflow-wrap: break-word;
-  }
-
-.grid-box{
+.grid-box {
     display: grid;
     grid-template-columns: repeat(4, minmax(auto, 1fr));
-    grid-template-areas: 
+    grid-template-areas:
         "one one two five"
         "three four four five";
     gap: 1rem 1.5rem;
     max-width: 1440px;
     padding: 5rem 11.9rem;
-
-}
-
-.no_1{
-    position: relative;
-    background-color: hsl(263, 55%, 52%);
-    color: hsl(0, 0%, 100%);
-    z-index: 1;
-    grid-area: one;
-}
-
-.quote{
-    position: absolute;
-    top: 0;
-    right: 15%;
-    z-index: 2;
-}
-
-.no_1>.user_comment>p{
-    color: hsl(210, 46%, 95%);
-}
-.user_comment>p{
-    opacity: 0.7;
-}
-
-.no_1>.user_com_brief {
-    position: relative;
-    z-index: 4;
-}
-
-.no_1>.user_profile {
-    position: relative;
-    z-index: 3;
-}
-
-.no_2{
-    background-color: hsl(217, 19%, 35%);
-    color: hsl(210, 46%, 95%);
-    grid-area: two;
-}
-
-.no_3{
-    background-color: hsl(0, 0%, 100%);
-    grid-area: three;
-}
-
-.no_4{
-    background-color: hsl(219, 29%, 14%);
-    color: hsl(210, 46%, 95%);
-    grid-area: four;
-}
-
-.no_5{
-    background-color: hsl(0, 0%, 100%);
-    grid-area: five;
 }
 
 .user_box {
     padding: 1.5rem 2rem;
     border-radius: 10px;
+    box-shadow: 40px 40px 40px -35px var(--light-gray);
 }
 
-.id_photo{
+.no_1 {
+    position: relative;
+    background-color: var(--mod-violet);
+    color: var(--white);
+    grid-area: one;
+}
+
+/* ##### background quote image ##### */
+.quote {
+    position: absolute;
+    top: 0;
+    right: 15%;
+    z-index: 1;
+}
+
+.no_1 .user_comment p {
+    color: var(--light-gray-blue);
+}
+
+.no_1 .user_profile {
+    position: relative;
+    z-index: 2;
+}
+
+.user_comment>p {
+    opacity: 0.7;
+}
+
+.no_1>.user_com_brief {
+    position: relative;
+    z-index: 2;
+}
+
+.no_2 {
+    background-color: hsl(217, 19%, 35%);
+    color: var(--light-gray-blue);
+    grid-area: two;
+}
+
+.no_3 {
+    background-color: var(--white);
+    grid-area: three;
+}
+
+.no_4 {
+    background-color: var(--dark-black-blue);
+    color: var(--light-gray-blue);
+    grid-area: four;
+}
+
+.no_5 {
+    background-color: var(--white);
+    grid-area: five;
+}
+
+.id_photo {
     border-radius: 100%;
     width: 35px;
 }
 
-.user_name{
+.user_name {
     padding-left: 13px;
     z-index: 5;
 }
 
-.user_com_brief{
+.user_com_brief {
     padding: 1rem 0%;
 }
 
-.ver_grad{
+.ver_grad {
     font-size: 11px;
 }
 
-.user_com_brief>h2{
+.user_com_brief>h2 {
     font-weight: 500;
 }
 
-#pat, #dan{
-    border: 2px solid hsl(263, 100%, 62%);
+#pat,
+#dan {
+    border: 2px solid var(--quote);
 }
 
+/* #######  Responsive layout   ####### */
 
- @media (min-width: 576px) and (max-width: 1100px){
-    .grid-box{
+@media (min-width: 576px) and (max-width: 1100px) {
+    .grid-box {
         grid-template-columns: repeat(2, minmax(auto, 1fr));
-        grid-template-areas: 
-        "one one"
-        "two three"
-        "four four"
-        "five five";
+        grid-template-areas:
+            "one one"
+            "two three"
+            "four four"
+            "five five";
         align-items: stretch;
         justify-content: stretch;
         padding: 1.5rem 1rem;
     }
-    .quote{
+
+    .quote {
         right: 7%;
     }
 
 }
 
-@media (max-width: 576px){
-    .grid-box{
+@media (max-width: 576px) {
+    .grid-box {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 1.5rem 1rem;
-        
+
     }
-    .quote{
+
+    .quote {
         right: 7%;
     }
 }
