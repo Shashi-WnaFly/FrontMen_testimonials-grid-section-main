@@ -67,6 +67,7 @@ body {
 }
 
 /* ##### background quote image ##### */
+
 .quote {
     position: absolute;
     top: 0;
@@ -159,7 +160,6 @@ body {
     .quote {
         right: 7%;
     }
-
 }
 
 @media (max-width: 576px) {
